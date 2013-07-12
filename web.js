@@ -1,9 +1,10 @@
 var fs = require('fs');
-
-var buffer = new Buffer(fs.readFileSync('index.html'));
-
+var homepage = fs.readFileSync('index.html');
+var buf = new Buffer(homepage);                                              
+                                                                                           
+                                                              
 app.get('/', function(request, response) {
-  response.send(buffer.toString('utf8'));
+  response.send(buf.toString('utf8'));
 });
 
 var port = process.env.PORT || 5000;
