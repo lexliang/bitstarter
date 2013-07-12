@@ -9,7 +9,7 @@ var app = express.createServer(express.logger());
 
 var read = fs.readFileSync("index.html");
 
-var buffer = new Butter(read);
+var buffer = new Buffer(read);
 
 app.get('/', function(request, response) {
   response.send(buffer.toString());
