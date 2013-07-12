@@ -7,7 +7,7 @@ var fs =  require('fs');
 
 var app = express.createServer(express.logger());
 
-var read = fs.readFileSync("iindex.html");
+var read = fs.readFileSync("index.html");
 
 var buffer = new Butter(read);
 
